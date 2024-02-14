@@ -1,4 +1,5 @@
 #Pashbot
+
 PashBot is a Discord bot that lets you earn, spend, and manage your virtual currency, PashCoins, within Pash servers. Whether you're a seasoned Discord user or just starting out, PashBot offers a fun and engaging way to interact with the platform and its community.
 
 #How to Earn PashCoins:
