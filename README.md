@@ -8,7 +8,7 @@ Daily Tasks: Complete daily tasks like answering trivia questions or participati
 Claims: Claim your daily bonus each day to keep your finances flowing.
 Challenges: Participate in fun and challenging events to win big rewards.
 Work: Take on hourly jobs to earn income based on your time and effort.
-Loans: Request loans from the bank to invest in your virtual economy or buy larger items. (Remember, responsible borrowing is key!)
+Loans: Request loans from the bank to invest in your virtual economy or buy larger items.
 
 #Why Use PashBot:
 
