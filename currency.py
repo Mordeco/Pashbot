@@ -1,7 +1,7 @@
 import json
 import random
 
-# Replace with your currency name
+# Replace with your currency name if needed
 currency_name = "Pash Coins"
 
 # Data structure for user balances
@@ -57,8 +57,6 @@ def claim_daily(message, bot):
         currency_data["streak"][user_id] = streak
         response = f"You claimed your daily bonus of {amount} {currency_name} (streak: {streak})!"
     await message.channel.send(response)
-
-# ... other currency management functions as needed ...
 
 if __name__ == "__main__":
     load_data("currency_data.json")
