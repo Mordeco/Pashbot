@@ -7,14 +7,14 @@ from banks import manage_banks
 from games import play_flip_coin
 from help import send_help
 
-# Replace with your Discord bot token
+# Your Discord bot token here
 bot_token = "YOUR_BOT_TOKEN"
 
-# Data file paths (adjust accordingly)
+# Data file 
 currency_data_file = "currency_data.json"
 banks_data_file = "banks_data.json"
 
-# Initialize bot and load data
+# bot
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -29,7 +29,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    # Handle various commands
+    # global commands
     if message.content.startswith("!balance"):
         await manage_currency.check_balance(message, bot)
     elif message.content.startswith("!work"):
