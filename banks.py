@@ -21,14 +21,13 @@ def create_bank(message, bot):
         async def send_bank_message():
             await message.channel.send("You already own a bank.")
 
-# Call the async function to execute it
 send_bank_message()
 
 def create_bank(message, banks_data, user_id):
   bank_name = message.content.split(" ")[1]
   if bank_name in banks_data:
     await message.channel.send("A bank with that name already exists.")
-    return None  # Or return some other value if needed
+    return None 
 
   banks_data[bank_name] = {
     "owner": user_id,
@@ -39,9 +38,9 @@ def create_bank(message, banks_data, user_id):
 
   await message.channel.send(f"Bank '{bank_name}' created successfully!")
 
-# Example usage
-message = "..."  # Get message object
-banks_data = {}  # Example of your existing bank data
+
+message = "..."  
+banks_data = {}  
 create_bank(message, banks_data, "user_id")
 
 def add_member(message, bot):
@@ -86,15 +85,13 @@ def deposit_to_bank(message, bot):
     if manage_currency.get_balance(user_id) < amount:
         await message.channel.send("Insufficient funds.")
         return
-    # Implement tiered withdrawal logic based on user contributions
     max_withdrawal = calculate_max_withdrawal(user_id, bank_name)
-    # ... (adjust max_withdrawal based on contribution_history)
     if amount > max_withdrawal:
         await message.channel.send(f"Maximum deposit allowed: {max_withdrawal}")
         return
     manage_currency.withdraw_coins(user_id, amount)
     banks_data[bank_name]["balance"] += amount
-    # Update contribution history
+    # Update history
     banks_data[bank_name]["contribution_history"][user_id] += amount
     await message.channel.send(f"Deposited {amount} {manage_currency.currency_name} to {bank_name}.")
 
@@ -120,10 +117,10 @@ def withdraw_from_bank(message, bot):
         await message.channel.send("Insufficient funds in the bank.")
         return
 
-    # Implement tiered withdrawal logic based on user contributions
+    #withdrawl
     max_withdrawal = calculate_max_withdrawal(user_id, bank_name)
 
-    # Adjust max_withdrawal based on contribution history
+    # Adjusting max withdrawl
     contribution_history = banks_data[bank_name]["contribution_history"][user_id]
     if contribution_history > 0:
         max_withdrawal *= 1.2  # Increase max withdrawal by 20% for contributors
@@ -138,5 +135,5 @@ def withdraw_from_bank(message, bot):
     manage_currency.add_coins(user_id, amount)
     await message.channel.send(f"Withdrew {amount} {manage_currency.currency_name} from {bank_name}.")
 
-# ... (optional additional functions)
+
 
