@@ -16,16 +16,6 @@ def send_help(message, bot):
 * **!flip <amount> <heads/tails>:** Bet Pash Coins on a coin flip (double win, lose bet amount).
 * **!help:** Get help with available commands.
 
-**Additional notes:**
-
-* For most commands, replace `<bank name>` with the actual name of your bank and `<username>` with the username of the user you want to add/invite.
-* Use the correct amount format (e.g., 10, 25) for commands involving money.
-* Remember cooldowns and limitations for certain actions.
-
-**For detailed information about a specific command, enter '!help <command name>'.**
-
-"""
-
     # Send the help message to the user's DM
     await message.author.send(help_message)
 
