@@ -1,3 +1,4 @@
+#gambling for more pash
 import random
 
 def play_flip_coin(message, bot):
@@ -27,5 +28,4 @@ def play_flip_coin(message, bot):
     
     await message.channel.send(response)
 
-# Example usage for testing
-# play_flip_coin(message, bot)
+
